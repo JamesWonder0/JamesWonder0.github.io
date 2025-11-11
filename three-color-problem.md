@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: page
 title: The Third Function Color
-description: Async languages already have two function colors. But they really should have three.
 permalink: /three-color-problem.html
 ---
+
+# The Third Function Color
+*Async languages already have two function colors. But they really should have three.*
 
 I recently ran across this article about problems using Rust async: [We
 Deleted Tokio and Saved \$127K: Our Rust Migration Story \|
@@ -23,7 +25,7 @@ problem!
 
 However...
 
-# Avoiding Blocking Is Hard
+## Avoiding Blocking Is Hard
 
 Having written and debugged lots of async code myself, this
 starvation-due-to-blocking problem is frustratingly common and painful.
@@ -42,7 +44,7 @@ significant in practice -- until something changes, you hit the tipping
 point, your system is spiraling into starvation and it's a crisis. And
 you have no idea why, or even where to start looking.
 
-# The Third Function Color: Yellow
+## The Third Function Color: Yellow
 
 This got me thinking about the classic article [What Color is Your
 Function? --
@@ -52,7 +54,6 @@ functions: red for async functions and blue for sync functions. And
 these colors have different rules, enforced by the compiler:
 
 -   Blue (sync) functions can be called anywhere.
-
 -   Red (async) functions can only be called from red functions.
 
 Unfortunately, in practice, these rules are wrong -- or at least,
@@ -68,17 +69,15 @@ Let's give these non-blocking sync functions their own color: yellow.
 Then in practice, the actual rules are:
 
 -   Yellow (sync non-blocking) functions can be called anywhere.
-
 -   Blue (sync blocking) functions can only be called from blue
     functions.
-
 -   Red (async) functions can only be called from red functions.
 
 Unfortunately, unlike the original red/blue distinction, the compiler
 provides no enforcement of these rules. You're on your own to ensure
 that red (async) functions do not call blue (sync blocking) functions.
 
-# Can We Do Better?
+## Can We Do Better?
 
 Could languages with async programming support (including, but not
 limited to, Rust) enforce these rules?
@@ -102,7 +101,7 @@ adding this from the start.)
 
 So what might this look like in practice?
 
-# The "noblock" Function Qualifier
+## The "noblock" Function Qualifier
 
 Interestingly, there's some prior art in Rust itself we can draw on --
 the "const" function qualifier. Just like our yellow functions, const
