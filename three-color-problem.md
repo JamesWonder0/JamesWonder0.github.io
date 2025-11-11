@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: default
 title: The Third Function Color
+description: Async languages already have two function colors. But they really should have three.
 permalink: /three-color-problem.html
 ---
 
