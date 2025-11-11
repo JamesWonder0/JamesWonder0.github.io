@@ -1,7 +1,8 @@
 ---
-subtitle: Async languages already have two function colors. But they
-  really should have three.
+layout: default
 title: The Third Function Color
+description: Async languages already have two function colors. But they really should have three.
+permalink: /three-color-problem.html
 ---
 
 I recently ran across this article about problems using Rust async: [We
