@@ -2,7 +2,9 @@
 
 layout: home
 
-title: Thoughts on Software
+title: Articles
+
+description: Articles
 
 ---
 
