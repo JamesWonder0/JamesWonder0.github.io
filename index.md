@@ -2,10 +2,6 @@
 
 layout: home
 
-title: Articles
-
-description: Articles
-
 ---
 
 
