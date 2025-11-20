@@ -2,6 +2,9 @@ title: Thoughts on Software
 description: Building software is hard. Let's make it less hard.
 theme: minima
 
+author:
+  email: jameswonder0@proton.me
+
 plugins:
   - jekyll-feed      # RSS/Atom feed at /feed.xml
   - jekyll-seo-tag   # Better meta tags / link previews
