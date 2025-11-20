@@ -6,7 +6,6 @@ tags: [async, effects, rust, csharp]
 permalink: /the-third-function-color/
 ---
 
-# The Third Function Color
 *Async languages already have two function colors. But they really should have three.*
 
 I recently ran across this article about problems using Rust async: [We
