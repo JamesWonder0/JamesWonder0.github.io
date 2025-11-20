@@ -3,6 +3,7 @@ description: Building software is hard. Let's make it less hard.
 theme: minima
 
 author:
+  name: James Wonder
   email: jameswonder0@proton.me
 
 plugins:
