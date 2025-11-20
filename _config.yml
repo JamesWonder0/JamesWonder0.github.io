@@ -1,3 +1,12 @@
-title: Making Software Suck Less
+title: Musings on Software
 description: Building software is hard. Let's make it less hard.
 theme: minima
+
+plugins:
+  - jekyll-feed      # RSS/Atom feed at /feed.xml
+  - jekyll-seo-tag   # Better meta tags / link previews
+  - jekyll-paginate  # Split long post lists across pages
+
+paginate: 10
+paginate_path: "/page:num/"
+
